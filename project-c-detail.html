@@ -1,0 +1,312 @@
+</html>
+<!-- Force rebuild: March 11, 2026 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mill creek house - Connor's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-shell {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 40px 88px;
+        }
+
+        .project-header {
+            padding: 64px 0 48px;
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 36px;
+        }
+
+        .project-header h1 {
+            font-size: 68px;
+            margin: 0 0 14px 0;
+            font-weight: 700;
+            letter-spacing: -2px;
+        }
+
+        .project-header p {
+            font-size: 20px;
+            color: #555;
+            margin: 0;
+            max-width: 760px;
+            line-height: 1.6;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 24px;
+        }
+
+        .story-rail {
+            display: grid;
+            gap: 18px;
+            align-content: start;
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+        }
+
+        .rail-card {
+            border: 1px solid #e2e2e2;
+            padding: 18px;
+            background: #fafafa;
+        }
+
+        .rail-card span {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .rail-card p {
+            margin: 10px 0 0;
+            font-size: 18px;
+            line-height: 1.45;
+            font-weight: 500;
+            color: #222;
+        }
+
+        .story-content {
+            display: grid;
+            gap: 24px;
+        }
+
+        .frame {
+            background: #f4f4f4;
+            min-height: 220px;
+            display: flex;
+            align-items: stretch;
+            justify-content: stretch;
+            color: #666;
+            font-weight: 600;
+            text-align: center;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .frame.hero {
+            min-height: 420px;
+        }
+
+        .frame-pair {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .frame-stack {
+            display: grid;
+            gap: 24px;
+        }
+
+        .frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #fafafa;
+            display: block;
+        }
+
+        .frame-label {
+            position: absolute;
+            left: 12px;
+            bottom: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #111;
+            font-size: 12px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 8px 10px;
+        }
+
+        .hidden-link {
+            display: none;
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            margin: 40px;
+            transition: background 0.3s;
+        }
+
+        .back-link:hover {
+            background: #333;
+        }
+
+        @media (max-width: 1024px) {
+            .project-shell {
+                padding: 0 30px 72px;
+            }
+
+            .project-header {
+                padding: 52px 0 38px;
+            }
+
+            .project-header h1 {
+                font-size: 50px;
+                letter-spacing: -1px;
+            }
+
+            .project-header p {
+                font-size: 18px;
+            }
+
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .story-rail {
+                position: static;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-shell {
+                padding: 0 20px 60px;
+            }
+
+            .project-header {
+                padding: 44px 0 28px;
+                margin-bottom: 26px;
+            }
+
+            .project-header h1 {
+                font-size: 38px;
+                margin-bottom: 10px;
+            }
+
+            .project-header p {
+                font-size: 17px;
+            }
+
+            .story-rail {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .rail-card p {
+                font-size: 16px;
+            }
+
+            .frame,
+            .frame.hero {
+                min-height: 220px;
+            }
+
+            .frame-pair {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .frame-stack {
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-shell {
+                padding: 0 16px 52px;
+            }
+
+            .project-header {
+                padding: 34px 0 22px;
+            }
+
+            .project-header h1 {
+                font-size: 30px;
+                margin: 0 0 8px 0;
+                letter-spacing: -0.5px;
+            }
+
+            .project-header p {
+                font-size: 15px;
+            }
+
+            .frame,
+            .frame.hero {
+                min-height: 180px;
+            }
+        }
+    </style>
+</head>
+<body data-page="industrial-design">
+    <header class="site-header">
+        <div class="header-inner container">
+            <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+            <nav class="header-nav">
+                <a href="about.html" class="nav-about" title="Details">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10.5"/>
+                        <circle cx="12" cy="8" r="1.5"/>
+                        <path d="M12 11v6"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="category-bar" aria-label="Top categories">
+        <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+        <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+        <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+        <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+    </nav>
+
+    <main class="project-shell">
+        <div class="project-header">
+            <h1>house on mill creek</h1>
+            <p>a residential project framework focused on site response, spatial sequence, structural strategy, and final architectural expression</p>
+        </div>
+
+        <section class="story-grid">
+            <aside class="story-rail">
+                <div class="rail-card">
+                    <span>Chapter 01</span>
+                    <p>Site + Constraints</p>
+                </div>
+                <div class="rail-card">
+                    <span>Chapter 02</span>
+                    <p>Plan + Circulation</p>
+                </div>
+                <div class="rail-card">
+                    <span>Chapter 03</span>
+                    <p>Envelope + Material</p>
+                </div>
+            </aside>
+
+            <div class="story-content">
+                <!-- Removed Form Sketch 01 (belongs to CTE pack) -->
+                <div class="frame-pair">
+                    <div class="frame"><img src="assets/images/id-project-c/form-sketch-02.jpg" alt="mill creek house form sketch 2"><div class="frame-label">Form Sketch 02</div></div>
+                    <div class="frame"><img src="assets/images/id-project-c/form-sketch-03.jpg" alt="mill creek house form sketch 3"><div class="frame-label">Form Sketch 03</div></div>
+                </div>
+                <div class="frame"><img src="assets/images/id-project-c/form-sketch-04.jpg" alt="mill creek house form sketch 4"><div class="frame-label">Form Sketch 04</div></div>
+                <div class="frame-pair">
+                    <div class="frame"><img src="assets/images/id-project-c/form-sketch-05.jpg" alt="mill creek house form sketch 5"><div class="frame-label">Form Sketch 05</div></div>
+                    <div class="frame"><img src="assets/images/id-project-c/form-sketch-02.jpg" alt="mill creek house form sketch detail"><div class="frame-label">Form Sketch Detail</div></div>
+                </div>
+                <div class="frame-stack">
+                    <div class="frame"><img src="assets/images/id-project-c/form-sketch-03.jpg" alt="mill creek house form sketch variation"><div class="frame-label">Form Variation</div></div>
+                    <!-- Removed Closing Sketch (belongs to CTE pack) -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+<!-- Deployment trigger: March 11, 2026 -->

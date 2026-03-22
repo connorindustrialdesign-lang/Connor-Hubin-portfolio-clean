@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTE pack - Connor's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .project-shell { max-width: 1240px; margin: 0 auto; padding: 0 40px 88px; }
+    .project-header { padding: 64px 0 56px; display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: end; }
+    .project-header h1 { font-size: 72px; margin: 0; line-height: 1; letter-spacing: -2px; }
+    .project-header p { font-size: 20px; color: #444; margin: 0; max-width: 560px; line-height: 1.6; }
+
+    .phase-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 40px; }
+    .phase-card { background: #f4f4f4; padding: 20px; min-height: 112px; display: flex; flex-direction: column; justify-content: space-between; }
+    .phase-card span { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: #666; font-weight: 600; }
+    .phase-card strong { font-size: 24px; font-weight: 700; line-height: 1.2; }
+
+    .layout-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; }
+    .column-stack { display: grid; gap: 20px; }
+    .frame { background: #f6f6f6; min-height: 220px; display: flex; align-items: stretch; justify-content: stretch; font-weight: 600; color: #666; padding: 0; text-align: center; position: relative; overflow: hidden; }
+    .frame.hero { min-height: 520px; }
+    .frame.wide { grid-column: 1 / -1; min-height: 300px; }
+    .frame.tall { min-height: 360px; }
+
+    .frame img { width: 100%; height: 100%; object-fit: contain; display: block; background: #fafafa; }
+    .frame-label { position: absolute; left: 12px; bottom: 12px; background: rgba(255,255,255,0.9); color: #111; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; padding: 8px 10px; }
+    
+    @media (max-width:1024px) {
+      .project-shell { padding: 0 30px 72px; }
+      .project-header { grid-template-columns: 1fr; gap: 20px; padding: 52px 0 40px; }
+      .project-header h1 { font-size: 54px; letter-spacing: -1px; }
+      .project-header p { font-size: 18px; }
+      .phase-strip { grid-template-columns: repeat(2, 1fr); }
+      .layout-grid { grid-template-columns: 1fr; }
+      .frame.hero { min-height: 420px; }
+    }
+    
+    @media (max-width:768px) {
+      .project-shell { padding: 0 20px 60px; }
+      .project-header { padding: 44px 0 32px; }
+      .project-header h1 { font-size: 40px; }
+      .project-header p { font-size: 17px; }
+      .phase-strip { grid-template-columns: 1fr; gap: 12px; }
+      .frame.hero { min-height: 320px; }
+      .frame, .frame.tall, .frame.wide { min-height: 240px; }
+    }
+    
+    @media (max-width:480px) {
+      .project-shell { padding: 0 16px 52px; }
+      .project-header { padding: 34px 0 22px; }
+      .project-header h1 { font-size: 30px; letter-spacing: -0.5px; }
+      .project-header p { font-size: 15px; }
+      .phase-card strong { font-size: 20px; }
+      .frame.hero { min-height: 260px; }
+      .frame, .frame.tall, .frame.wide { min-height: 190px; }
+    }
+  </style>
+</head>
+<body data-page="industrial-design">
+  <header class="site-header">
+    <div class="header-inner container">
+      <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+      <nav class="header-nav">
+        <a href="about.html" class="nav-about" title="Details">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10.5"/>
+            <circle cx="12" cy="8" r="1.5"/>
+            <path d="M12 11v6"/>
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="category-bar" aria-label="Top categories">
+    <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+    <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+    <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+    <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+  </nav>
+
+  <main class="project-shell">
+    <div class="project-header">
+      <div>
+        <h1>CTE pack</h1>
+      </div>
+      <p>a modular project framework for concept, pack architecture, user interaction, and final validation</p>
+    </div>
+
+    <section class="phase-strip">
+      <article class="phase-card"><span>Phase 01</span><strong>Problem + Context</strong></article>
+      <article class="phase-card"><span>Phase 02</span><strong>Form + Layout</strong></article>
+      <article class="phase-card"><span>Phase 03</span><strong>Function + System</strong></article>
+      <article class="phase-card"><span>Phase 04</span><strong>Prototype + Outcome</strong></article>
+    </section>
+
+    <section class="layout-grid">
+      <div class="column-stack">
+        <div class="frame hero"><img src="assets/images/id-project-a/form-sketch-01.jpg" alt="CTE pack form sketch 1"><div class="frame-label">Form Sketch 01</div></div>
+        <div class="frame"><img src="assets/images/id-project-a/form-sketch-02.jpg" alt="CTE pack form sketch 2"><div class="frame-label">Form Sketch 02</div></div>
+        <div class="frame"><img src="assets/images/id-project-a/form-sketch-03.jpg" alt="CTE pack form sketch 3"><div class="frame-label">Form Sketch 03</div></div>
+      </div>
+      <div class="column-stack">
+        <div class="frame tall"><img src="assets/images/id-project-a/form-sketch-04.jpg" alt="CTE pack form sketch 4"><div class="frame-label">Form Sketch 04</div></div>
+        <div class="frame"><img src="assets/images/id-project-a/form-sketch-05.jpg" alt="CTE pack form sketch 5"><div class="frame-label">Form Sketch 05</div></div>
+        <div class="frame"><img src="assets/images/id-project-a/form-sketch-06.jpg" alt="CTE pack form sketch 6"><div class="frame-label">Form Sketch 06</div></div>
+      </div>
+      <div class="frame wide"><img src="assets/images/id-project-a/form-sketch-07.jpg" alt="CTE pack form sketch 7"><div class="frame-label">Form Sketch 07</div></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
